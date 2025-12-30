@@ -133,6 +133,13 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 64
 
+[node name="CountdownLabel" type="Label" parent="CanvasLayer"]
+offset_left = 563.0
+offset_top = 224.0
+offset_right = 603.0
+offset_bottom = 399.0
+theme_override_font_sizes/font_size = 128
+
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.90107703, 0.4336591, 0, -0.4336591, 0.90107703, 0, 4.1566734, 0)
 

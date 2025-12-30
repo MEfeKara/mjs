@@ -11,7 +11,7 @@ func _ready():
 	setup_song_list()
 	
 	# Geri butonu
-	$BackButton.pressed.connect(func(): get_tree().change_scene_to_file("res://scenes/main_menu.tscn"))
+	$BackButton.pressed.connect(func(): get_tree().change_scene_to_file("res://MainMenu.tscn"))
 	
 	# Oyna butonu (başlangıçta kapalı)
 	play_button.disabled = true

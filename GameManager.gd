@@ -14,14 +14,23 @@ var songs = [
 		"scroll_speed": 850.0
 	},
 	{
-		"title": "Yeah",
-		"artist": "The Coder",
+		"title": "Gonna What?",
+		"artist": "Redches",
 		"chart_file": "res://new.json",
-		"audio_file": preload("res://music/yeah.mp3"),
+		"audio_file": preload("res://music/Gonna what.mp3"),
 		"stage_scene": preload("res://ConcertHall.tscn"),
 		"scroll_speed": 1000.0
 	}
 ]
+# GameManager.gd
+var last_run_data = {
+	"score": 0,
+	"combo": 0,
+	"perfects": 0,
+	"greats": 0,
+	"goods": 0,
+	"misses": 0
+}
 
 # Şarkı seçmek için bu fonksiyonu kullan kanka, karışıklığı bu önler
 func select_song(index: int):

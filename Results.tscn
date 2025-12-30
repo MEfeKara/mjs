@@ -1,0 +1,58 @@
+[gd_scene load_steps=2 format=3 uid="uid://cnt5fsvymxswk"]
+
+[ext_resource type="Script" uid="uid://dlcgmdwaaoo2t" path="res://results.gd" id="1_1eby8"]
+
+[node name="Results" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1eby8")
+
+[node name="RankLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 866.0
+offset_top = 72.0
+offset_right = 906.0
+offset_bottom = 162.0
+theme_override_font_sizes/font_size = 65
+
+[node name="ScoreLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 623.0
+offset_top = 163.0
+offset_right = 663.0
+offset_bottom = 186.0
+
+[node name="AccLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 710.0
+offset_top = 187.0
+offset_right = 750.0
+offset_bottom = 210.0
+
+[node name="DetailsLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 861.0
+offset_top = 197.0
+offset_right = 901.0
+offset_bottom = 220.0
+
+[node name="RetryButton" type="Button" parent="."]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Retry?"
+
+[node name="MenuButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 43.0
+offset_right = 84.0
+offset_bottom = 74.0
+text = "Fuck That"
+
+[connection signal="pressed" from="RetryButton" to="." method="_on_retry_button_pressed"]
+[connection signal="pressed" from="MenuButton" to="." method="_on_menu_button_pressed"]

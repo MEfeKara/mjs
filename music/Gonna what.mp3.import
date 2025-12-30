@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ywhf8vyofkhq"
+path="res://.godot/imported/Gonna what.mp3-d5cf45b430dd8f0d5da242de123b99e3.mp3str"
+
+[deps]
+
+source_file="res://music/Gonna what.mp3"
+dest_files=["res://.godot/imported/Gonna what.mp3-d5cf45b430dd8f0d5da242de123b99e3.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

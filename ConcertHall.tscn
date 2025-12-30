@@ -1,4 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://coul8md57rcnw"]
+[gd_scene load_steps=4 format=3 uid="uid://coul8md57rcnw"]
+
+[ext_resource type="Texture2D" uid="uid://k3i4ook7qkk4" path="res://images/notes/note.png" id="1_5qhak"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_k1amr"]
 
@@ -17,3 +19,8 @@ mesh = SubResource("PlaneMesh_k1amr")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_5qhak")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2557647, -4.4290667)
+shaded = true
+texture = ExtResource("1_5qhak")

@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://4m6khq42thwb"]
+
+[ext_resource type="Script" uid="uid://cuiqxb1ufsy47" path="res://note.gd" id="1_doocs"]
+[ext_resource type="Texture2D" uid="uid://k3i4ook7qkk4" path="res://images/notes/note.png" id="2_wn01w"]
+
+[node name="Note" type="Node2D" groups=["notes"]]
+script = ExtResource("1_doocs")
+
+[node name="Head" type="ColorRect" parent="."]
+clip_children = 1
+offset_right = 80.0
+offset_bottom = 80.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Head"]
+z_index = 1
+position = Vector2(40, 40.5)
+scale = Vector2(0.32, 0.316)
+texture = ExtResource("2_wn01w")
+
+[node name="Tail" type="ColorRect" parent="."]
+offset_right = 60.0
+offset_bottom = 300.0
+color = Color(1, 0.4166032, 0.34792536, 1)

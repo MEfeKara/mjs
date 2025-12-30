@@ -1,0 +1,10 @@
+{
+  "song_title": "Yeah",
+  "bpm": 140,
+  "notes": [
+	{"time": 1.5, "lane": 0, "length": 0},
+	{"time": 2.0, "lane": 2, "length": 0},
+	{"time": 3.5, "lane": 1, "length": 1.5},
+	{"time": 5.2, "lane": 3, "length": 0}
+  ]
+}

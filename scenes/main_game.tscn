@@ -1,0 +1,139 @@
+[gd_scene load_steps=10 format=3 uid="uid://di6kv2w778vb7"]
+
+[ext_resource type="Script" uid="uid://g6hee3k87gfy" path="res://main_game.gd" id="1_0rdsr"]
+[ext_resource type="PackedScene" uid="uid://4m6khq42thwb" path="res://note.tscn" id="2_ipu61"]
+[ext_resource type="PackedScene" uid="uid://bvfox6yk1ssr6" path="res://hit_effect.tscn" id="3_2l77h"]
+[ext_resource type="AudioStream" uid="uid://bjnglxbu51plf" path="res://music/rockstar.mp3" id="3_ygxny"]
+[ext_resource type="Script" uid="uid://bn711i4t4dir2" path="res://note_spawner.gd" id="4_wi4c7"]
+[ext_resource type="Texture2D" uid="uid://by72koufl5hxh" path="res://images/notes/circle_yellow.png" id="5_70vka"]
+[ext_resource type="Texture2D" uid="uid://dilr0dto6r0dl" path="res://images/notes/circle_purple.png" id="6_2l77h"]
+[ext_resource type="Texture2D" uid="uid://bfwaai0gxdtdh" path="res://images/notes/circle_blue.png" id="7_nqdth"]
+[ext_resource type="Texture2D" uid="uid://c11d4ja0mgq1e" path="res://images/notes/circle_red.png" id="8_5cypo"]
+
+[node name="MainGame" type="Node3D"]
+script = ExtResource("1_0rdsr")
+note_scene = ExtResource("2_ipu61")
+hit_effect_scene = ExtResource("3_2l77h")
+
+[node name="Music" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("3_ygxny")
+
+[node name="NoteSpawner" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 700, 0)
+script = ExtResource("4_wi4c7")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 10
+
+[node name="Notes" type="Node2D" parent="CanvasLayer"]
+
+[node name="LanePositions" type="Node2D" parent="CanvasLayer"]
+
+[node name="0" type="Marker2D" parent="CanvasLayer/LanePositions"]
+position = Vector2(790, 100)
+
+[node name="1" type="Marker2D" parent="CanvasLayer/LanePositions"]
+position = Vector2(890, 100)
+
+[node name="2" type="Marker2D" parent="CanvasLayer/LanePositions"]
+position = Vector2(990, 100)
+
+[node name="3" type="Marker2D" parent="CanvasLayer/LanePositions"]
+position = Vector2(1090, 100)
+
+[node name="ScoreLabel" type="Label" parent="CanvasLayer"]
+offset_left = 906.0
+offset_top = -2.0
+offset_right = 971.0
+offset_bottom = 21.0
+text = "Score : 0"
+
+[node name="HitLine" type="Node2D" parent="CanvasLayer"]
+position = Vector2(0, 139)
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/HitLine"]
+visible = false
+offset_right = 1150.0
+offset_bottom = 5.0
+
+[node name="ColorRect2" type="ColorRect" parent="CanvasLayer/HitLine"]
+clip_children = 1
+offset_left = 750.0
+offset_top = -39.0
+offset_right = 830.0
+offset_bottom = 41.0
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/HitLine/ColorRect2"]
+position = Vector2(40, 40.000004)
+scale = Vector2(0.32000002, 0.32000005)
+texture = ExtResource("5_70vka")
+
+[node name="ColorRect3" type="ColorRect" parent="CanvasLayer/HitLine"]
+clip_children = 1
+offset_left = 850.0
+offset_top = -39.0
+offset_right = 930.0
+offset_bottom = 41.0
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/HitLine/ColorRect3"]
+position = Vector2(40.000008, 40.000004)
+scale = Vector2(0.32000002, 0.32000002)
+texture = ExtResource("6_2l77h")
+
+[node name="ColorRect4" type="ColorRect" parent="CanvasLayer/HitLine"]
+clip_children = 1
+offset_left = 950.0
+offset_top = -39.0
+offset_right = 1030.0
+offset_bottom = 41.0
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/HitLine/ColorRect4"]
+position = Vector2(40.000023, 40.000008)
+scale = Vector2(0.3200002, 0.32000002)
+texture = ExtResource("7_nqdth")
+
+[node name="ColorRect5" type="ColorRect" parent="CanvasLayer/HitLine"]
+clip_children = 1
+offset_left = 1050.0
+offset_top = -39.0
+offset_right = 1130.0
+offset_bottom = 41.0
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/HitLine/ColorRect5"]
+position = Vector2(40, 40.000004)
+scale = Vector2(0.32000002, 0.32000005)
+texture = ExtResource("8_5cypo")
+
+[node name="ComboLabel" type="Label" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -18.0
+offset_top = -46.0
+offset_right = 22.0
+offset_bottom = 42.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 64
+text = "0"
+
+[node name="JudgmentLabel" type="Label" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.0
+offset_top = -139.0
+offset_right = 16.0
+offset_bottom = -51.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 64
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.90107703, 0.4336591, 0, -0.4336591, 0.90107703, 0, 4.1566734, 0)
+
+[node name="StagePivot" type="Node3D" parent="."]

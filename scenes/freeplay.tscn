@@ -1,0 +1,56 @@
+[gd_scene load_steps=2 format=3 uid="uid://t5e1hugeqdix"]
+
+[ext_resource type="Script" uid="uid://ccrstrxos04ru" path="res://freeplay.gd" id="1_066v2"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_066v2")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1153.0
+offset_bottom = 650.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 0
+offset_left = 349.0
+offset_top = 4.0
+offset_right = 1154.0
+offset_bottom = 652.0
+
+[node name="SongList" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+
+[node name="SongDetails" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 608.0
+offset_right = 347.0
+offset_bottom = 648.0
+
+[node name="SongName" type="Label" parent="SongDetails"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="BackButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 573.0
+offset_right = 176.0
+offset_bottom = 608.0
+text = "BACK"
+
+[node name="PlayButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 177.0
+offset_top = 573.0
+offset_right = 347.0
+offset_bottom = 608.0
+text = "PLAY!
+"

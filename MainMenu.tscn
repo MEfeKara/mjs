@@ -1,0 +1,49 @@
+[gd_scene load_steps=3 format=3 uid="uid://bh47l410m55sw"]
+
+[ext_resource type="Script" uid="uid://bafqckl0n8ayj" path="res://main_menu.gd" id="1_i26rj"]
+
+[sub_resource type="FontVariation" id="FontVariation_uchyk"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_i26rj")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1159.0
+offset_bottom = 648.0
+
+[node name="MenuButtons" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_top = -308.0
+offset_right = 175.0
+offset_bottom = 342.0
+scale = Vector2(2, 2)
+alignment = 1
+
+[node name="Story" type="Button" parent="MenuButtons"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("FontVariation_uchyk")
+text = "STORY"
+
+[node name="Freeplay" type="Button" parent="MenuButtons"]
+layout_mode = 2
+text = "FREEPLAY"
+
+[node name="Options" type="Button" parent="MenuButtons"]
+layout_mode = 2
+text = "OPTIONS
+"
+
+[node name="Credits" type="Button" parent="MenuButtons"]
+layout_mode = 2
+text = "CREDITS"
+
+[node name="Exit" type="Button" parent="MenuButtons"]
+layout_mode = 2
+text = "EXIT
+"
